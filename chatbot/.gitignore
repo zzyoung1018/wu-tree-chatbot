@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+!.env.server.example
+.venv/
+node_modules/
+frontend/dist/
+state/*
+!state/.gitkeep
+__pycache__/
+.pytest_cache/
+*.pyc
+release/
+*.log
+.DS_Store
+*.tsbuildinfo

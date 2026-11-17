@@ -1,0 +1,52 @@
+# Keep the public repository focused on the application and its source pipeline.
+/*
+!/.gitignore
+!/.gitattributes
+!/AGENTS.md
+!/README.md
+!/chatbot/
+!/analysis/
+!/rag workspace/
+
+# Credentials and local runtime data.
+.env
+.env.*
+!.env.example
+!.env.server.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+access.txt
+state/
+release/
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.db-wal
+*.db-shm
+
+# Dependencies, build output, caches and generated review pages.
+.venv/
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+test-results/
+playwright-report/
+*.pyc
+*.tsbuildinfo
+*.log
+.DS_Store
+._*
+/analysis/pilot/review/
+
+# Original book/photography archives and unrelated office documents stay local.
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.docx

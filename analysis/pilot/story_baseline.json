@@ -1,0 +1,18 @@
+{
+  "树碑立传：吴中古树名木的故事教育读物(1).pdf": {
+    "sha256": "0d3fff1401977166a94e74f4ae3da945777daa8c9888370d2d8406637b2be277",
+    "bytes": 233991508
+  },
+  "analysis/scripts/pilot_stories.py": {
+    "sha256": "92cad79d066d2fef6f679aea0bd9885e803daef56239cc69c7e07616938e0d89",
+    "bytes": 10128
+  },
+  "analysis/pilot/stories.jsonl": {
+    "sha256": "a747d7b2186f1d24e8ad0658a84aaca92139e8def996efc160ee6f3cfc5e7cdb",
+    "bytes": 335285
+  },
+  "analysis/pilot/chunks_story.old.jsonl": {
+    "sha256": "47144a2d7e3516526fa3860e807493521d6c8ce1e02e7b3d9c5813c8e4ff9133",
+    "bytes": 301138
+  }
+}

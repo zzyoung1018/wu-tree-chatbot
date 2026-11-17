@@ -1,0 +1,8 @@
+* text=auto
+*.json -text
+*.jsonl -text
+*.csv -text whitespace=cr-at-eol
+*.db binary
+*.jpg binary
+*.jpeg binary
+*.png binary

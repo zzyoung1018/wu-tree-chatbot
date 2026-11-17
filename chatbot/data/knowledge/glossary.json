@@ -1,0 +1,1429 @@
+{
+  "version": 1,
+  "districts": {
+    "吴中区": {
+      "en": "Wuzhong District",
+      "short_en": "Wuzhong",
+      "aliases": [
+        "吴中",
+        "wuzhong",
+        "wuzhong district"
+      ]
+    },
+    "姑苏区": {
+      "en": "Gusu District",
+      "short_en": "Gusu",
+      "aliases": [
+        "姑苏",
+        "gusu",
+        "gusu district"
+      ]
+    },
+    "吴江区": {
+      "en": "Wujiang District",
+      "short_en": "Wujiang",
+      "aliases": [
+        "吴江",
+        "wujiang",
+        "wujiang district"
+      ]
+    },
+    "相城区": {
+      "en": "Xiangcheng District",
+      "short_en": "Xiangcheng",
+      "aliases": [
+        "相城",
+        "xiangcheng",
+        "xiangcheng district"
+      ]
+    },
+    "昆山市": {
+      "en": "Kunshan City",
+      "short_en": "Kunshan",
+      "aliases": [
+        "昆山",
+        "kunshan",
+        "kunshan city"
+      ]
+    },
+    "常熟市": {
+      "en": "Changshu City",
+      "short_en": "Changshu",
+      "aliases": [
+        "常熟",
+        "changshu",
+        "changshu city"
+      ]
+    },
+    "太仓市": {
+      "en": "Taicang City",
+      "short_en": "Taicang",
+      "aliases": [
+        "太仓",
+        "taicang",
+        "taicang city"
+      ]
+    },
+    "张家港市": {
+      "en": "Zhangjiagang City",
+      "short_en": "Zhangjiagang",
+      "aliases": [
+        "张家港",
+        "zhangjiagang",
+        "zhangjiagang city"
+      ]
+    },
+    "虎丘区（高新区）": {
+      "en": "Huqiu District (Suzhou New District)",
+      "short_en": "Suzhou New District (SND)",
+      "aliases": [
+        "虎丘区",
+        "高新区",
+        "苏州高新区",
+        "huqiu district",
+        "suzhou new district",
+        {
+          "text": "SND",
+          "cased": true
+        }
+      ]
+    },
+    "工业园区": {
+      "en": "Suzhou Industrial Park (SIP)",
+      "short_en": "SIP",
+      "aliases": [
+        "苏州工业园区",
+        "园区",
+        "suzhou industrial park",
+        {
+          "text": "SIP",
+          "cased": true
+        }
+      ]
+    }
+  },
+  "species": {
+    "银杏": {
+      "en": "Ginkgo",
+      "latin": "Ginkgo biloba",
+      "aliases_en": [
+        "ginkgo",
+        "maidenhair tree",
+        "gingko"
+      ]
+    },
+    "香樟": {
+      "en": "Camphor Tree",
+      "latin": "Cinnamomum camphora",
+      "aliases_en": [
+        "camphor tree",
+        "camphor",
+        "camphor laurel"
+      ]
+    },
+    "圆柏": {
+      "en": "Chinese Juniper",
+      "latin": "Juniperus chinensis",
+      "aliases_en": [
+        "chinese juniper"
+      ]
+    },
+    "龙柏": {
+      "en": "Dragon Juniper",
+      "latin": "Juniperus chinensis 'Kaizuka'",
+      "aliases_en": [
+        "dragon juniper",
+        "kaizuka juniper",
+        "twisted cypress",
+        "dragon cypress"
+      ]
+    },
+    "侧柏": {
+      "en": "Oriental Arborvitae",
+      "latin": "Platycladus orientalis",
+      "aliases_en": [
+        "oriental arborvitae",
+        "chinese arborvitae",
+        "platycladus",
+        "biota"
+      ]
+    },
+    "罗汉松": {
+      "en": "Buddhist Pine",
+      "latin": "Podocarpus macrophyllus",
+      "aliases_en": [
+        "buddhist pine",
+        "podocarpus",
+        "yew plum pine"
+      ]
+    },
+    "雪松": {
+      "en": "Deodar Cedar",
+      "latin": "Cedrus deodara",
+      "aliases_en": [
+        "deodar cedar",
+        "himalayan cedar",
+        "cedar"
+      ]
+    },
+    "广玉兰": {
+      "en": "Southern Magnolia",
+      "latin": "Magnolia grandiflora",
+      "aliases_en": [
+        "southern magnolia",
+        "bull bay"
+      ]
+    },
+    "玉兰": {
+      "en": "Yulan Magnolia",
+      "latin": "Magnolia denudata",
+      "aliases_en": [
+        "yulan magnolia",
+        "white magnolia",
+        "yulan"
+      ]
+    },
+    "白玉兰": {
+      "en": "Yulan Magnolia",
+      "latin": "Magnolia denudata",
+      "aliases_en": [
+        "yulan magnolia",
+        "jade orchid"
+      ],
+      "canonical": "玉兰"
+    },
+    "红山茶": {
+      "en": "Red Camellia",
+      "latin": "Camellia japonica",
+      "aliases_en": [
+        "red camellia",
+        "japanese camellia"
+      ]
+    },
+    "山茶": {
+      "en": "Camellia",
+      "latin": "Camellia japonica",
+      "aliases_en": []
+    },
+    "单体红山茶": {
+      "en": "Single Red Camellia",
+      "latin": "Camellia japonica",
+      "aliases_en": [
+        "single red camellia"
+      ],
+      "note": "Catalog label retained. Entry 38 body calls these Meiren Cha, a horticultural sasanqua cultivar; preserve that discrepancy rather than asserting a specimen identification."
+    },
+    "连理山茶": {
+      "en": "Intertwined Camellia",
+      "latin": "Camellia japonica",
+      "aliases_en": [
+        "intertwined camellia",
+        "twin camellia"
+      ]
+    },
+    "孩儿莲": {
+      "en": "Hai'er Lian (Baby-Lotus) Camellia",
+      "latin": "Camellia japonica",
+      "aliases_en": [
+        "hai'er lian (baby-lotus) camellia",
+        "haierlian",
+        "hai'er lian",
+        "hai er lian",
+        "baby lotus camellia",
+        "baby-face lotus camellia"
+      ]
+    },
+    "石楠": {
+      "en": "Chinese Photinia",
+      "latin": "Photinia serratifolia",
+      "aliases_en": [
+        "chinese photinia",
+        "photinia"
+      ]
+    },
+    "榉树": {
+      "en": "Chinese Zelkova",
+      "latin": "Zelkova schneideriana",
+      "aliases_en": [
+        "chinese zelkova",
+        "zelkova",
+        "schneider zelkova"
+      ]
+    },
+    "朴树": {
+      "en": "Chinese Hackberry",
+      "latin": "Celtis sinensis",
+      "aliases_en": [
+        "chinese hackberry",
+        "hackberry"
+      ]
+    },
+    "黄杨": {
+      "en": "Chinese Boxwood",
+      "latin": "Buxus sinica",
+      "aliases_en": [
+        "chinese boxwood",
+        "boxwood"
+      ]
+    },
+    "雀舌黄杨": {
+      "en": "Bodinier Boxwood",
+      "latin": "Buxus bodinieri",
+      "aliases_en": [
+        "bodinier boxwood"
+      ]
+    },
+    "瓜子黄杨": {
+      "en": "Small-leaved Boxwood",
+      "latin": "Buxus sinica var. parvifolia",
+      "aliases_en": [
+        "small-leaved boxwood",
+        "melon-seed boxwood"
+      ]
+    },
+    "枫杨": {
+      "en": "Chinese Wingnut",
+      "latin": "Pterocarya stenoptera",
+      "aliases_en": [
+        "chinese wingnut",
+        "wingnut"
+      ]
+    },
+    "杨树": {
+      "en": "Poplar",
+      "latin": "Populus",
+      "aliases_en": [
+        "poplar",
+        "cottonwood"
+      ]
+    },
+    "桂花": {
+      "en": "Sweet Osmanthus",
+      "latin": "Osmanthus fragrans",
+      "aliases_en": [
+        "sweet osmanthus",
+        "osmanthus",
+        "fragrant olive"
+      ]
+    },
+    "凌霄": {
+      "en": "Chinese Trumpet Vine",
+      "latin": "Campsis grandiflora",
+      "aliases_en": [
+        "chinese trumpet vine",
+        "trumpet vine"
+      ]
+    },
+    "含笑": {
+      "en": "Banana Shrub",
+      "latin": "Magnolia figo",
+      "aliases_en": [
+        "banana shrub",
+        "michelia figo"
+      ]
+    },
+    "国槐": {
+      "en": "Chinese Scholar Tree",
+      "latin": "Styphnolobium japonicum",
+      "aliases_en": [
+        "chinese scholar tree",
+        "sophora japonica",
+        "pagoda tree",
+        "scholar tree"
+      ]
+    },
+    "木香": {
+      "en": "Banks' Rose",
+      "latin": "Rosa banksiae",
+      "aliases_en": [
+        "banks' rose",
+        "banks rose",
+        "lady banks rose"
+      ]
+    },
+    "杨梅": {
+      "en": "Chinese Bayberry",
+      "latin": "Morella rubra",
+      "aliases_en": [
+        "chinese bayberry",
+        "myrica rubra",
+        "yangmei",
+        "bayberry",
+        "waxberry"
+      ]
+    },
+    "板栗": {
+      "en": "Chinese Chestnut",
+      "latin": "Castanea mollissima",
+      "aliases_en": [
+        "chinese chestnut",
+        "chestnut"
+      ]
+    },
+    "枫香": {
+      "en": "Chinese Sweetgum",
+      "latin": "Liquidambar formosana",
+      "aliases_en": [
+        "chinese sweetgum",
+        "sweetgum",
+        "formosan sweetgum"
+      ]
+    },
+    "枸杞": {
+      "en": "Chinese Wolfberry",
+      "latin": "Lycium chinense",
+      "aliases_en": [
+        "chinese wolfberry",
+        "wolfberry",
+        "goji"
+      ]
+    },
+    "梅花": {
+      "en": "Chinese Plum",
+      "latin": "Prunus mume",
+      "aliases_en": [
+        "chinese plum",
+        "plum blossom",
+        "japanese apricot"
+      ]
+    },
+    "楸树": {
+      "en": "Qiu Catalpa",
+      "latin": "Catalpa bungei",
+      "aliases_en": [
+        "qiu catalpa",
+        "catalpa"
+      ]
+    },
+    "牡丹": {
+      "en": "Tree Peony",
+      "latin": "Paeonia suffruticosa",
+      "aliases_en": [
+        "tree peony",
+        "peony"
+      ]
+    },
+    "琼花": {
+      "en": "Qionghua Viburnum",
+      "latin": "Viburnum macrocephalum f. keteleeri",
+      "aliases_en": [
+        "qionghua viburnum",
+        "qionghua",
+        "chinese snowball viburnum"
+      ]
+    },
+    "白皮松": {
+      "en": "Lacebark Pine",
+      "latin": "Pinus bungeana",
+      "aliases_en": [
+        "lacebark pine",
+        "white-barked pine"
+      ]
+    },
+    "紫薇": {
+      "en": "Crape Myrtle",
+      "latin": "Lagerstroemia indica",
+      "aliases_en": [
+        "crape myrtle",
+        "crepe myrtle"
+      ]
+    },
+    "紫藤": {
+      "en": "Chinese Wisteria",
+      "latin": "Wisteria sinensis",
+      "aliases_en": [
+        "chinese wisteria",
+        "wisteria"
+      ]
+    },
+    "红豆": {
+      "en": "Chinese Red-bean Tree",
+      "latin": "Ormosia hosiei",
+      "aliases_en": [
+        "chinese red-bean tree",
+        "red bean tree",
+        "red-bean tree",
+        "ormosia"
+      ]
+    },
+    "蜡梅": {
+      "en": "Wintersweet",
+      "latin": "Chimonanthus praecox",
+      "aliases_en": [
+        "wintersweet",
+        "winter sweet"
+      ]
+    },
+    "马尾松": {
+      "en": "Masson Pine",
+      "latin": "Pinus massoniana",
+      "aliases_en": [
+        "masson pine",
+        "masson's pine",
+        "chinese red pine"
+      ]
+    }
+  },
+  "places": {
+    "木渎古镇": {
+      "en": "Mudu Ancient Town",
+      "aliases": [
+        "mudu",
+        "mudu town",
+        "mudu water town"
+      ],
+      "anchors": [
+        "木渎",
+        "木渎古镇"
+      ]
+    },
+    "金庭镇": {
+      "en": "Jinting Town",
+      "aliases": [
+        "jinting",
+        "xishan",
+        "west hill"
+      ],
+      "anchors": [
+        "金庭",
+        "金庭镇"
+      ]
+    },
+    "东山镇": {
+      "en": "Dongshan Town",
+      "aliases": [
+        "dongshan",
+        "dongshan town"
+      ],
+      "anchors": [
+        "东山",
+        "东山镇"
+      ]
+    },
+    "光福镇": {
+      "en": "Guangfu Town",
+      "aliases": [
+        "guangfu"
+      ],
+      "anchors": [
+        "光福",
+        "光福镇"
+      ]
+    },
+    "甪直镇": {
+      "en": "Luzhi Town",
+      "aliases": [
+        "luzhi",
+        "lu zhi"
+      ],
+      "anchors": [
+        "甪直",
+        "甪直镇"
+      ]
+    },
+    "同里镇": {
+      "en": "Tongli Town",
+      "aliases": [
+        "tongli",
+        "tongli ancient town"
+      ],
+      "anchors": [
+        "同里",
+        "同里古镇"
+      ]
+    },
+    "黎里镇": {
+      "en": "Lili Town",
+      "aliases": [
+        "lili"
+      ],
+      "anchors": [
+        "黎里",
+        "黎里镇"
+      ]
+    },
+    "震泽镇": {
+      "en": "Zhenze Town",
+      "aliases": [
+        "zhenze"
+      ],
+      "anchors": [
+        "震泽",
+        "震泽镇"
+      ]
+    },
+    "锦溪镇": {
+      "en": "Jinxi Town",
+      "aliases": [
+        "jinxi"
+      ],
+      "anchors": [
+        "锦溪",
+        "锦溪镇"
+      ]
+    },
+    "千灯镇": {
+      "en": "Qiandeng Town",
+      "aliases": [
+        "qiandeng"
+      ],
+      "anchors": [
+        "千灯",
+        "千灯镇"
+      ]
+    },
+    "镇湖街道": {
+      "en": "Zhenhu Subdistrict",
+      "aliases": [
+        "zhenhu"
+      ],
+      "anchors": [
+        "镇湖",
+        "镇湖街道"
+      ]
+    },
+    "虞山街道": {
+      "en": "Yushan Subdistrict",
+      "aliases": [
+        "yushan subdistrict"
+      ],
+      "anchors": [
+        "虞山",
+        "虞山街道"
+      ]
+    },
+    "光福镇司徒庙": {
+      "en": "Situ Temple",
+      "aliases": [
+        "situ temple",
+        "situ miao",
+        "situmiao"
+      ],
+      "anchors": [
+        "光福镇司徒庙",
+        "光福司徒庙",
+        "司徒庙"
+      ]
+    },
+    "金庭镇三官殿": {
+      "en": "Sanguan Hall",
+      "aliases": [
+        "sanguan hall",
+        "sanguan temple",
+        "sanguandian"
+      ],
+      "anchors": [
+        "金庭镇三官殿",
+        "三官殿"
+      ]
+    },
+    "东山雕花楼": {
+      "en": "Dongshan Carved Building",
+      "aliases": [
+        "carved building",
+        "diaohualou",
+        "diao hua lou"
+      ],
+      "anchors": [
+        "东山雕花楼",
+        "雕花楼"
+      ]
+    },
+    "木渎古镇严家花园": {
+      "en": "Yan Family Garden",
+      "aliases": [
+        "yan family garden",
+        "yanjia garden"
+      ],
+      "anchors": [
+        "木渎古镇严家花园",
+        "严家花园"
+      ]
+    },
+    "木渎古镇古松园": {
+      "en": "Gusong Garden",
+      "aliases": [
+        "gusong garden",
+        "ancient pine garden"
+      ],
+      "anchors": [
+        "木渎古镇古松园",
+        "古松园"
+      ]
+    },
+    "东山镇灵源古寺": {
+      "en": "Lingyuan Temple",
+      "aliases": [
+        "lingyuan temple",
+        "lingyuan ancient temple"
+      ],
+      "anchors": [
+        "东山镇灵源古寺",
+        "灵源寺"
+      ]
+    },
+    "天平山": {
+      "en": "Tianping Mountain",
+      "aliases": [
+        "tianping mountain",
+        "tianping hill",
+        "tianpingshan"
+      ],
+      "anchors": [
+        "天平山"
+      ]
+    },
+    "拙政园": {
+      "en": "Humble Administrator's Garden",
+      "aliases": [
+        "humble administrators garden",
+        "zhuozheng garden"
+      ],
+      "anchors": [
+        "拙政园"
+      ]
+    },
+    "狮子林": {
+      "en": "Lion Grove Garden",
+      "aliases": [
+        "lion grove",
+        "shizi lin"
+      ],
+      "anchors": [
+        "狮子林"
+      ]
+    },
+    "留园": {
+      "en": "Lingering Garden",
+      "aliases": [
+        "lingering garden",
+        "liu yuan",
+        "liuyuan"
+      ],
+      "anchors": [
+        "留园"
+      ]
+    },
+    "网师园": {
+      "en": "Master of the Nets Garden",
+      "aliases": [
+        "master of nets garden",
+        "wangshi garden"
+      ],
+      "anchors": [
+        "网师园"
+      ]
+    },
+    "沧浪亭": {
+      "en": "Canglang Pavilion",
+      "aliases": [
+        "canglang pavilion",
+        "surging waves pavilion"
+      ],
+      "anchors": [
+        "沧浪亭"
+      ]
+    },
+    "耦园": {
+      "en": "Couple's Retreat Garden",
+      "aliases": [
+        "couples retreat garden",
+        "ou yuan",
+        "ouyuan"
+      ],
+      "anchors": [
+        "耦园"
+      ]
+    },
+    "怡园": {
+      "en": "Garden of Harmony",
+      "aliases": [
+        "yi yuan",
+        "yiyuan",
+        "garden of harmony"
+      ],
+      "anchors": [
+        "怡园"
+      ]
+    },
+    "亭林园": {
+      "en": "Tinglin Garden",
+      "aliases": [
+        "tinglin garden",
+        "tinglin park"
+      ],
+      "anchors": [
+        "亭林园"
+      ]
+    }
+  },
+  "special_terms": {
+    "清奇古怪": {
+      "target_species": "圆柏",
+      "entry_no": 18,
+      "en": "The Four 'Qing, Qi, Gu, Guai' (Clear, Peculiar, Ancient, and Quaint) Junipers",
+      "aliases": [
+        "qing qi gu guai",
+        "qingqiguguai",
+        "clear peculiar ancient quaint",
+        "four han cypresses"
+      ],
+      "anchors": [
+        "清奇古怪",
+        "圆柏",
+        "光福镇司徒庙"
+      ]
+    },
+    "孩儿莲": {
+      "target_species": "红山茶",
+      "catalog_species": "孩儿莲",
+      "entry_no": 16,
+      "en": "'Hai’er Lian' (Baby-Lotus) Camellia",
+      "aliases": [
+        "hai'er lian (baby-lotus) camellia",
+        "haierlian",
+        "hai'er lian",
+        "hai er lian",
+        "baby lotus camellia",
+        "baby-face lotus camellia"
+      ],
+      "anchors": [
+        "孩儿莲",
+        "红山茶",
+        "东山雕花楼"
+      ]
+    },
+    "虎丘山": {
+      "target_location": "虎丘山",
+      "en": "Tiger Hill (Huqiu Mountain)",
+      "aliases": [
+        "tiger hill",
+        "huqiu mountain",
+        "huqiu pagoda"
+      ],
+      "anchors": [
+        "虎丘山"
+      ],
+      "not_district": true
+    }
+  },
+  "culture": {
+    "东汉": {
+      "en": "Eastern Han dynasty (25–220 CE)",
+      "aliases": [
+        "eastern han"
+      ]
+    },
+    "唐": {
+      "en": "Tang dynasty (618–907 CE)",
+      "aliases": [
+        "tang dynasty"
+      ]
+    },
+    "宋": {
+      "en": "Song dynasty (960–1279 CE)",
+      "aliases": [
+        "song dynasty"
+      ]
+    },
+    "明": {
+      "en": "Ming dynasty (1368–1644 CE)",
+      "aliases": [
+        "ming dynasty"
+      ]
+    },
+    "清": {
+      "en": "Qing dynasty (1644–1912 CE)",
+      "aliases": [
+        "qing dynasty"
+      ]
+    },
+    "大历": {
+      "en": "Dali reign era (766–779 CE)",
+      "aliases": [
+        "dali era"
+      ]
+    },
+    "邓禹": {
+      "en": "Deng Yu (2–58 CE), an Eastern Han general",
+      "aliases": [
+        "deng yu"
+      ]
+    },
+    "乾隆": {
+      "en": "Qianlong, Qing emperor (reigned 1735–1796)",
+      "aliases": [
+        "qianlong",
+        "emperor qianlong"
+      ]
+    },
+    "憨山": {
+      "en": "Hanshan Deqing (1546–1623), a Buddhist monk",
+      "aliases": [
+        "hanshan deqing",
+        "master hanshan"
+      ]
+    }
+  },
+  "notes": [
+    "Internal keys follow the source catalog, including horticultural names. Latin names are terminology references, not new specimen determinations.",
+    "Entry 16 contains Hai’er Lian; entry 37 contains Canglang Pavilion wingnuts.",
+    "The bare word Huqiu is not an administrative district alias."
+  ],
+  "references": [
+    {
+      "title": "Flora of China / iPlant, Ormosia hosiei",
+      "url": "https://www.iplant.cn/foc/pdf/Ormosia.pdf"
+    },
+    {
+      "title": "National Forestry and Grassland Administration, Catalpa bungei",
+      "url": "https://www.forestry.gov.cn/html/main/main_4461/20221228093242184483173/file/20221228093321387814685.pdf"
+    },
+    {
+      "title": "Botanical terminology and Chinese labels",
+      "source": "story.db and improve_v4.md; source narrative prevails over catalog labels"
+    }
+  ],
+  "themes": {
+    "形态奇观": {
+      "zh": "形态奇观",
+      "en": "Unusual forms",
+      "definition": "树干、树冠、枝叶或生长姿态有明确的独特形态记载。",
+      "aliases": [
+        "造型奇特",
+        "形态奇特",
+        "奇形怪状",
+        "形状奇特",
+        "unusual shape",
+        "unusual shapes",
+        "unusual forms",
+        "strange shapes"
+      ]
+    },
+    "枯木重生": {
+      "zh": "枯木重生",
+      "en": "Revival",
+      "definition": "古树受损、衰败后萌新枝或恢复生长的具体记载。",
+      "aliases": [
+        "死而复生",
+        "起死回生",
+        "枯木逢春",
+        "雷击重生",
+        "revived",
+        "revival",
+        "came back to life"
+      ]
+    },
+    "帝王传说": {
+      "zh": "帝王传说",
+      "en": "Imperial legends",
+      "definition": "古树关联帝王的传说或历史叙事，保留原文限定。",
+      "aliases": [
+        "帝王将相",
+        "皇帝有关",
+        "emperors",
+        "imperial legends"
+      ]
+    },
+    "名人与古树": {
+      "zh": "名人与古树",
+      "en": "People and trees",
+      "definition": "具体历史人物与古树、其遗址或纪念活动的联系。",
+      "aliases": [
+        "历史人物",
+        "historical figures",
+        "名人手植"
+      ]
+    },
+    "寺观古树": {
+      "zh": "寺观古树",
+      "en": "Temple trees",
+      "definition": "古树与寺院、道观、祠庙沿革的直接联系。",
+      "aliases": [
+        "寺观",
+        "古寺",
+        "temple trees"
+      ]
+    },
+    "园林名木": {
+      "zh": "园林名木",
+      "en": "Garden trees",
+      "definition": "古树在园林布局、园址沿革或造景中的作用。",
+      "aliases": [
+        "园林名木",
+        "garden trees"
+      ]
+    },
+    "村落与地名": {
+      "zh": "村落与地名",
+      "en": "Villages and place names",
+      "definition": "树木关联村镇变化、社区生活或地名来源。",
+      "aliases": [
+        "村落",
+        "地名",
+        "village life",
+        "place names"
+      ]
+    },
+    "民间信仰": {
+      "zh": "民间信仰",
+      "en": "Local beliefs",
+      "definition": "树木关联本地神祇、祭祀、庙会或庙桥文化。",
+      "aliases": [
+        "民间信仰",
+        "庙桥文化",
+        "local beliefs",
+        "folk beliefs"
+      ]
+    },
+    "战争与革命记忆": {
+      "zh": "战争与革命记忆",
+      "en": "War and revolutionary memory",
+      "definition": "明确叙述战争破坏、革命活动或相关人物记忆。",
+      "aliases": [
+        "战争",
+        "革命",
+        "war",
+        "revolution"
+      ]
+    },
+    "诗文书画中的树": {
+      "zh": "诗文书画中的树",
+      "en": "Trees in literature and art",
+      "definition": "古树与诗词、文学、绘画或书法有具体联系。",
+      "aliases": [
+        "诗文",
+        "书画",
+        "文学",
+        "poems",
+        "paintings",
+        "literary writing"
+      ]
+    },
+    "古树保护与修复": {
+      "zh": "古树保护与修复",
+      "en": "Protection and restoration",
+      "definition": "具体保树、让路、修复、移植或养护行为及其结果。",
+      "aliases": [
+        "保护",
+        "修复",
+        "留出生长空间",
+        "protection",
+        "restoration"
+      ]
+    },
+    "树种辨识": {
+      "zh": "树种辨识",
+      "en": "Species identification",
+      "definition": "树种名称、分类、误认或目录与实地鉴别差异。",
+      "aliases": [
+        "树种辨识",
+        "树种鉴别",
+        "species identification"
+      ]
+    },
+    "连理与共生": {
+      "zh": "连理与共生",
+      "en": "Intertwining and coexistence",
+      "definition": "连理、缠绕、寄生或多种植物共同生长的记载。",
+      "aliases": [
+        "连理",
+        "共生",
+        "寄生",
+        "intertwined",
+        "symbiosis"
+      ]
+    },
+    "花果物产": {
+      "zh": "花果物产",
+      "en": "Flowers and fruit",
+      "definition": "开花、结果、采收、植物物产或花期的具体叙述。",
+      "aliases": [
+        "花期",
+        "果实",
+        "开花",
+        "flowers",
+        "fruit"
+      ]
+    },
+    "田野走访": {
+      "zh": "田野走访",
+      "en": "Field visits and interviews",
+      "definition": "志愿者寻树经历、实地勘察、居民口述或访谈的具体记载。",
+      "aliases": [
+        "田野",
+        "口述",
+        "走访",
+        "field visits",
+        "interviews"
+      ]
+    }
+  },
+  "species_groups": {
+    "camellia": {
+      "zh": "山茶类",
+      "en": "camellias",
+      "members": [
+        "山茶",
+        "孩儿莲",
+        "单体红山茶",
+        "连理山茶"
+      ],
+      "aliases": [
+        "camellia",
+        "camellias",
+        "山茶类",
+        "山茶"
+      ]
+    },
+    "magnolia": {
+      "zh": "玉兰类",
+      "en": "magnolias",
+      "members": [
+        "玉兰",
+        "广玉兰",
+        "含笑"
+      ],
+      "aliases": [
+        "magnolia",
+        "magnolias",
+        "玉兰类"
+      ],
+      "note": "按本目录的木兰属标签归组；白玉兰是玉兰别名，不是额外目录树种。"
+    },
+    "cypress_juniper": {
+      "zh": "柏类",
+      "en": "junipers and cypresses",
+      "members": [
+        "圆柏",
+        "龙柏"
+      ],
+      "aliases": [
+        "cypress",
+        "cypresses",
+        "juniper",
+        "junipers",
+        "柏树",
+        "古柏",
+        "柏类"
+      ]
+    },
+    "pine": {
+      "zh": "松类",
+      "en": "pines",
+      "members": [
+        "白皮松",
+        "马尾松"
+      ],
+      "related": [
+        "罗汉松",
+        "雪松"
+      ],
+      "aliases": [
+        "pine",
+        "pines",
+        "松树",
+        "古松",
+        "松类"
+      ]
+    },
+    "catalog_凌霄": {
+      "zh": "凌霄类",
+      "en": "Chinese Trumpet Vine group",
+      "members": [
+        "凌霄"
+      ],
+      "aliases": [
+        "凌霄类"
+      ]
+    },
+    "catalog_国槐": {
+      "zh": "国槐类",
+      "en": "Chinese Scholar Tree group",
+      "members": [
+        "国槐"
+      ],
+      "aliases": [
+        "国槐类"
+      ]
+    },
+    "catalog_木香": {
+      "zh": "木香类",
+      "en": "Banks' Rose group",
+      "members": [
+        "木香"
+      ],
+      "aliases": [
+        "木香类"
+      ]
+    },
+    "catalog_杨梅": {
+      "zh": "杨梅类",
+      "en": "Chinese Bayberry group",
+      "members": [
+        "杨梅"
+      ],
+      "aliases": [
+        "杨梅类"
+      ]
+    },
+    "catalog_板栗": {
+      "zh": "板栗类",
+      "en": "Chinese Chestnut group",
+      "members": [
+        "板栗"
+      ],
+      "aliases": [
+        "板栗类"
+      ]
+    },
+    "catalog_枫杨": {
+      "zh": "枫杨类",
+      "en": "Chinese Wingnut group",
+      "members": [
+        "枫杨"
+      ],
+      "aliases": [
+        "枫杨类"
+      ]
+    },
+    "catalog_枫香": {
+      "zh": "枫香类",
+      "en": "Chinese Sweetgum group",
+      "members": [
+        "枫香"
+      ],
+      "aliases": [
+        "枫香类"
+      ]
+    },
+    "catalog_枸杞": {
+      "zh": "枸杞类",
+      "en": "Chinese Wolfberry group",
+      "members": [
+        "枸杞"
+      ],
+      "aliases": [
+        "枸杞类"
+      ]
+    },
+    "catalog_桂花": {
+      "zh": "桂花类",
+      "en": "Sweet Osmanthus group",
+      "members": [
+        "桂花"
+      ],
+      "aliases": [
+        "桂花类"
+      ]
+    },
+    "catalog_梅花": {
+      "zh": "梅花类",
+      "en": "Chinese Plum group",
+      "members": [
+        "梅花"
+      ],
+      "aliases": [
+        "梅花类"
+      ]
+    },
+    "catalog_楸树": {
+      "zh": "楸树类",
+      "en": "Qiu Catalpa group",
+      "members": [
+        "楸树"
+      ],
+      "aliases": [
+        "楸树类"
+      ]
+    },
+    "catalog_榉树": {
+      "zh": "榉树类",
+      "en": "Chinese Zelkova group",
+      "members": [
+        "榉树"
+      ],
+      "aliases": [
+        "榉树类"
+      ]
+    },
+    "catalog_牡丹": {
+      "zh": "牡丹类",
+      "en": "Tree Peony group",
+      "members": [
+        "牡丹"
+      ],
+      "aliases": [
+        "牡丹类"
+      ]
+    },
+    "catalog_琼花": {
+      "zh": "琼花类",
+      "en": "Qionghua Viburnum group",
+      "members": [
+        "琼花"
+      ],
+      "aliases": [
+        "琼花类"
+      ]
+    },
+    "catalog_石楠": {
+      "zh": "石楠类",
+      "en": "Chinese Photinia group",
+      "members": [
+        "石楠"
+      ],
+      "aliases": [
+        "石楠类"
+      ]
+    },
+    "catalog_紫薇": {
+      "zh": "紫薇类",
+      "en": "Crape Myrtle group",
+      "members": [
+        "紫薇"
+      ],
+      "aliases": [
+        "紫薇类"
+      ]
+    },
+    "catalog_紫藤": {
+      "zh": "紫藤类",
+      "en": "Chinese Wisteria group",
+      "members": [
+        "紫藤"
+      ],
+      "aliases": [
+        "紫藤类"
+      ]
+    },
+    "catalog_红豆": {
+      "zh": "红豆类",
+      "en": "Chinese Red-bean Tree group",
+      "members": [
+        "红豆"
+      ],
+      "aliases": [
+        "红豆类"
+      ]
+    },
+    "catalog_罗汉松": {
+      "zh": "罗汉松类",
+      "en": "Buddhist Pine group",
+      "members": [
+        "罗汉松"
+      ],
+      "aliases": [
+        "罗汉松类"
+      ]
+    },
+    "catalog_蜡梅": {
+      "zh": "蜡梅类",
+      "en": "Wintersweet group",
+      "members": [
+        "蜡梅"
+      ],
+      "aliases": [
+        "蜡梅类"
+      ]
+    },
+    "catalog_银杏": {
+      "zh": "银杏类",
+      "en": "Ginkgo group",
+      "members": [
+        "银杏"
+      ],
+      "aliases": [
+        "银杏类"
+      ]
+    },
+    "catalog_雪松": {
+      "zh": "雪松类",
+      "en": "Deodar Cedar group",
+      "members": [
+        "雪松"
+      ],
+      "aliases": [
+        "雪松类"
+      ]
+    },
+    "catalog_香樟": {
+      "zh": "香樟类",
+      "en": "Camphor Tree group",
+      "members": [
+        "香樟"
+      ],
+      "aliases": [
+        "香樟类"
+      ]
+    },
+    "catalog_黄杨": {
+      "zh": "黄杨类",
+      "en": "Chinese Boxwood group",
+      "members": [
+        "黄杨"
+      ],
+      "aliases": [
+        "黄杨类"
+      ]
+    }
+  },
+  "theme_intents": {
+    "family": {
+      "en": "Family exploration",
+      "aliases": [
+        "带孩子",
+        "亲子",
+        "for children",
+        "with children",
+        "for kids",
+        "with kids"
+      ],
+      "themes": [
+        "形态奇观",
+        "花果物产",
+        "村落与地名"
+      ]
+    },
+    "interesting": {
+      "en": "Interesting stories",
+      "aliases": [
+        "有意思",
+        "有趣",
+        "动人",
+        "interesting",
+        "fascinating"
+      ],
+      "themes": [
+        "形态奇观",
+        "帝王传说",
+        "枯木重生"
+      ]
+    }
+  },
+  "followup_intents": {
+    "age": [
+      "树龄",
+      "年纪",
+      "多少岁",
+      "几岁",
+      "how old",
+      "what age",
+      "age of"
+    ],
+    "location": [
+      "在哪里",
+      "在哪儿",
+      "什么地方",
+      "where is",
+      "where are",
+      "located"
+    ],
+    "deities": [
+      "供奉",
+      "哪三位神",
+      "which deities",
+      "which three deities"
+    ]
+  }
+}

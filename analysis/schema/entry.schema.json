@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "entry.schema.json",
+  "title": "树的故事条目卡（父块）",
+  "description": "一个条目一张卡，不建索引。子块的 unit_id 等于本卡的 unit_id。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["unit_id", "source_id", "section", "entry_no", "title", "district", "location", "items", "species",
+               "tree_ids", "site_ids", "official_codes", "status", "children", "images", "pdf_pages", "printed_pages",
+               "n_chars_body", "n_chars_small", "as_of", "review_status", "pipeline"],
+  "properties": {
+    "unit_id": {"type": "string", "pattern": "^shbl:story-[0-9]{3}$"},
+    "source_id": {"const": "SRC-SHBL"},
+    "section": {"const": "树的故事"},
+    "entry_no": {"type": "integer", "minimum": 1, "maximum": 105},
+    "title": {"type": "string", "minLength": 1, "description": "正文页标题，照印"},
+    "district": {"enum": ["吴中区", "姑苏区", "吴江区", "虎丘区（高新区）", "相城区", "工业园区", "昆山市", "常熟市", "太仓市", "张家港市"]},
+    "location": {"type": "string", "minLength": 1, "description": "正文页标题处印的地点，可能与索引写法不同"},
+    "items": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["item_no", "location", "species", "status", "status_source", "origin"],
+        "properties": {
+          "item_no": {"type": "integer", "minimum": 1},
+          "location": {"type": "string", "minLength": 1, "description": "正文优先；原始索引写法保留在 index_story.jsonl"},
+          "species": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "status": {"enum": ["extant", "gone"]},
+          "status_source": {"enum": ["index", "text", "index+text"]},
+          "status_note": {"type": "string"},
+          "origin": {"enum": ["index_main", "index_sub", "override"]}
+        }
+      }
+    },
+    "species": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "tree_ids": {"type": "array", "items": {"type": "string"}},
+    "site_ids": {"type": "array", "items": {"type": "string"}},
+    "link": {
+      "type": "object", "additionalProperties": false, "required": ["status"],
+      "properties": {"status": {"enum": ["explicit", "cross_ref", "manual", "unlinked"]}, "evidence": {"type": "string"}}
+    },
+    "official_codes": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "status": {"enum": ["extant", "gone", "partial"]},
+    "children": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["chunk_id", "content_type", "item_no", "label"],
+        "properties": {
+          "chunk_id": {"type": "string", "pattern": "^shbl:story-[0-9]{3}:(body|fieldnote|interview|background)-[0-9]+$"},
+          "content_type": {"enum": ["story", "fieldnote", "interview", "background"]},
+          "item_no": {"type": "integer", "minimum": 1},
+          "label": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "images": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["image_id", "file", "role", "pdf_page", "printed_page", "bbox", "native_px", "kind", "rights"],
+        "properties": {
+          "image_id": {"type": "string", "pattern": "^shbl-img-p[0-9]{3}-[0-9]+$"},
+          "file": {"type": "string", "pattern": "^pilot/images/story/shbl-img-p[0-9]{3}-[0-9]+\\.jpg$"},
+          "role": {"enum": ["index", "story"]},
+          "item_no": {"type": "integer", "minimum": 1},
+          "pdf_page": {"type": "integer", "minimum": 6, "maximum": 81},
+          "printed_page": {"type": "integer", "minimum": 10, "maximum": 161},
+          "bbox": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}},
+          "native_px": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer", "minimum": 1}},
+          "kind": {"enum": ["photo", "painting", "drawing", "map", "document"]},
+          "caption": {"type": "string"},
+          "credit": {"type": "string"},
+          "rights": {
+            "type": "object", "additionalProperties": false, "required": ["status"],
+            "properties": {"status": {"enum": ["unknown", "museum", "third_party"]}, "note": {"type": "string"}}
+          }
+        },
+        "allOf": [{"if": {"properties": {"role": {"const": "index"}}}, "then": {"required": ["item_no"]}}]
+      }
+    },
+    "captions": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["text", "printed_page"],
+        "properties": {"text": {"type": "string", "minLength": 1}, "printed_page": {"type": "integer"}}
+      }
+    },
+    "pdf_pages": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 38, "maximum": 81}},
+    "printed_pages": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 74, "maximum": 161}},
+    "n_chars_body": {"type": "integer", "minimum": 1},
+    "n_chars_small": {"type": "integer", "minimum": 0},
+    "as_of": {"type": "string", "pattern": "^[0-9]{4}(-[0-9]{2})?$"},
+    "review_status": {"enum": ["pending", "verified", "rejected"]},
+    "review_flags": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["code", "note"],
+        "properties": {
+          "code": {"enum": ["location_conflict", "status_text_hint", "third_party_image", "override", "section_species_unmatched"]},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "pipeline": {"type": "string"}
+  }
+}

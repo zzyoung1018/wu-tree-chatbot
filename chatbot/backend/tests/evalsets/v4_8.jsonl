@@ -1,0 +1,8 @@
+{"id": "inventory_en", "set": "dev_en", "lang": "en", "ui_lang": "zh", "question": "How many ginkgo tree/grove items are recorded in Wuzhong District?", "legacy_check": "v4_8", "expected_entry": null}
+{"id": "dragon_en", "set": "dev_en", "lang": "en", "ui_lang": "zh", "question": "How old is the Dragon Juniper at Sanguan Hall? Please show its book photo.", "legacy_check": "v4_8", "expected_entry": 2}
+{"id": "mudu_en", "set": "dev_en", "lang": "en", "ui_lang": "zh", "question": "Where is the Buddhist pine in Mudu?", "legacy_check": "v4_8", "expected_entry": 23}
+{"id": "four_en", "set": "dev_en", "lang": "en", "ui_lang": "zh", "question": "Tell me about the four cypresses Qingqiguguai at Situ Temple. Did Deng Yu really plant them?", "legacy_check": "v4_8", "expected_entry": 18}
+{"id": "camellia_en", "set": "dev_en", "lang": "en", "ui_lang": "zh", "question": "Tell me about the Hai'er Lian camellia. Why does it have that name?", "legacy_check": "v4_8", "expected_entry": 16}
+{"id": "poplar_en", "set": "dev_en", "lang": "en", "ui_lang": "zh", "question": "Tell me the story of the poplars in Shuangyang Village.", "legacy_check": "v4_8", "expected_entry": 66}
+{"id": "theme_zh", "set": "dev_zh", "lang": "zh", "ui_lang": "zh", "question": "吴中区有哪些造型奇特或死而复生的古树？", "legacy_check": "v4_8", "expected_entry": null}
+{"id": "tiger_en", "set": "dev_en", "lang": "en", "ui_lang": "zh", "question": "Are there any ancient trees on Tiger Hill?", "legacy_check": "v4_8", "expected_entry": null}

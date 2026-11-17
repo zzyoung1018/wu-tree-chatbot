@@ -1,0 +1,16 @@
+{"id": "dev-01", "set": "dev_zh", "lang": "zh", "question": "树洞口和断口怎么清理", "gold_entries": [26], "gold_type": "interview"}
+{"id": "dev-02", "set": "dev_zh", "lang": "zh", "question": "天平山的马尾松还在吗", "gold_entries": [1], "gold_chunks": ["shbl:story-001:body-3"], "gold_type": "story"}
+{"id": "dev-03", "set": "dev_zh", "lang": "zh", "question": "三官殿的龙柏", "gold_entries": [2], "gold_chunks": ["shbl:story-002:body-2"], "gold_type": "story"}
+{"id": "dev-04", "set": "dev_zh", "lang": "zh", "question": "吴中203", "gold_entries": [21], "gold_type": null}
+{"id": "dev-05", "set": "dev_zh", "lang": "zh", "question": "石楠花开时志愿者去做了什么", "gold_entries": [21], "gold_type": "fieldnote"}
+{"id": "dev-06", "set": "dev_zh", "lang": "zh", "question": "灵源古寺的罗汉松", "gold_entries": [11], "gold_type": "story"}
+{"id": "dev-07", "set": "dev_zh", "lang": "zh", "question": "古树受伤了怎么保护", "gold_entries": [26], "gold_type": "interview"}
+{"id": "dev-08", "set": "dev_zh", "lang": "zh", "question": "湖沙庙的榉树", "gold_entries": [26], "gold_type": "story"}
+{"id": "dev-09", "set": "dev_zh", "lang": "zh", "question": "树身裂开后，能不能自己慢慢长好？书中受访者怎么说？", "gold_entries": [26], "gold_type": "interview"}
+{"id": "dev-10", "set": "dev_zh", "lang": "zh", "question": "一边枝繁叶茂一边无精打采，为什么保护人员要往地下找原因？", "gold_entries": [26], "gold_type": "interview"}
+{"id": "dev-11", "set": "dev_zh", "lang": "zh", "question": "为了躲开花的气味，调查人员提前带了什么？", "gold_entries": [21], "gold_type": "fieldnote"}
+{"id": "dev-12", "set": "dev_zh", "lang": "zh", "question": "外国摄影师把那棵树认成了樟树，后来测绘才确认品种，是哪一处？", "gold_entries": [34], "gold_type": "story"}
+{"id": "dev-13", "set": "dev_zh", "lang": "zh", "question": "苏州西边山上的那些松树后来为什么消失了？", "gold_entries": [1], "gold_chunks": ["shbl:story-001:body-3"], "gold_type": "story"}
+{"id": "dev-14", "set": "dev_zh", "lang": "zh", "question": "冬天傍晚太暗，调查人员拿手电拍的是哪棵树？", "gold_entries": [14], "gold_type": "fieldnote"}
+{"id": "dev-15", "set": "dev_zh", "lang": "zh", "question": "长在岩壁缝里，盘起来像卧着的龙的那棵是什么？", "gold_entries": [21], "gold_type": "story"}
+{"id": "dev-16", "set": "dev_zh", "lang": "zh", "question": "修复大树伤口前，突出来的死木头要不要留着？", "gold_entries": [26], "gold_type": "interview"}

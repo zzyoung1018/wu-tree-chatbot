@@ -1,0 +1,27 @@
+{"id": "sanguan_age", "set": "dev_zh", "lang": "zh", "question": "三官殿的龙柏有多少岁？", "legacy_check": "zh27", "expected_entry": 2, "word": "1500", "followup": "具体在什么位置？"}
+{"id": "gone_list", "set": "dev_zh", "lang": "zh", "question": "书中哪些树已经不存了？", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "legend", "set": "dev_zh", "lang": "zh", "question": "司徒庙的清奇古怪真是邓禹种、乾隆赐名的吗？", "legacy_check": "zh27", "expected_entry": 18, "word": null, "followup": "它们真是邓禹种的吗？"}
+{"id": "official_code", "set": "dev_zh", "lang": "zh", "question": "吴中203是哪棵树？", "legacy_check": "zh27", "expected_entry": 21, "word": "石楠"}
+{"id": "interview", "set": "dev_zh", "lang": "zh", "question": "古树受伤了怎么保护？", "legacy_check": "zh27", "expected_entry": 26, "word": null}
+{"id": "opening_hours", "set": "dev_zh", "lang": "zh", "question": "博物馆明天几点开门？", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "unknown_tree", "set": "dev_zh", "lang": "zh", "question": "火星村那棵万年龙血树今年多少岁？", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "location_conflict", "set": "dev_zh", "lang": "zh", "question": "灵源古寺的罗汉松在哪里？", "legacy_check": "zh27", "expected_entry": 11, "word": null}
+{"id": "historical_status", "set": "dev_zh", "lang": "zh", "question": "现在天平山的马尾松还在吗？", "legacy_check": "zh27", "expected_entry": 1, "word": null}
+{"id": "split_item", "set": "dev_zh", "lang": "zh", "question": "木渎的罗汉松在哪里？", "legacy_check": "zh27", "expected_entry": 23, "word": "古松园", "followup": "配上它的书内照片，并介绍一下。"}
+{"id": "unsupported_count", "set": "dev_zh", "lang": "zh", "question": "书里树龄超过一千年的树共有多少棵？", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "district_overview", "set": "dev_zh", "lang": "zh", "question": "给我介绍吴中区一些树", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "district_fun", "set": "dev_zh", "lang": "zh", "question": "吴中区有哪些有意思的古树？", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "district_list", "set": "dev_zh", "lang": "zh", "question": "列出书中吴中区的所有树木条目", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "semantic_photo", "set": "dev_zh", "lang": "zh", "question": "外国摄影师把那棵树认成了樟树，后来测绘才确认品种，是哪一处？", "legacy_check": "zh27", "expected_entry": 34, "word": "枫杨"}
+{"id": "semantic_mask", "set": "dev_zh", "lang": "zh", "question": "为了躲开花的气味，调查人员提前带了什么？", "legacy_check": "zh27", "expected_entry": 21, "word": "口罩"}
+{"id": "semantic_rock", "set": "dev_zh", "lang": "zh", "question": "长在岩壁缝里，盘起来像卧着的龙的那棵是什么？", "legacy_check": "zh27", "expected_entry": 21, "word": "石楠"}
+{"id": "semantic_pine", "set": "dev_zh", "lang": "zh", "question": "苏州西边山上的那些松树后来为什么消失了？", "legacy_check": "zh27", "expected_entry": 1, "word": "松干蚧"}
+{"id": "unlisted_species_story", "set": "dev_zh", "lang": "zh", "question": "给我介绍一些古杨树以及关于他们的故事", "legacy_check": "zh27", "expected_entry": 66, "word": "双杨"}
+{"id": "unlisted_species_wrong_district", "set": "dev_zh", "lang": "zh", "question": "给我介绍吴中区古杨树的故事", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "rich_story", "set": "dev_zh", "lang": "zh", "question": "详细介绍司徒庙的清奇古怪，讲讲它们的形态、传说和历史，并配上书里的图片", "legacy_check": "zh27", "expected_entry": 18, "word": "清奇古怪"}
+{"id": "single_site_count", "set": "dev_zh", "lang": "zh", "question": "司徒庙的清奇古怪一共有几棵古柏？", "legacy_check": "zh27", "expected_entry": 18, "word": null}
+{"id": "short_district_negative", "set": "dev_zh", "lang": "zh", "question": "介绍吴中古杨树的故事", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "short_district_positive", "set": "dev_zh", "lang": "zh", "question": "介绍吴江古杨树的传说", "legacy_check": "zh27", "expected_entry": 66, "word": "双杨"}
+{"id": "hightech_district", "set": "dev_zh", "lang": "zh", "question": "介绍高新区一些古树", "legacy_check": "zh27", "expected_entry": null, "word": null}
+{"id": "alias_location", "set": "dev_zh", "lang": "zh", "question": "穹窿山海云院的连理山茶有什么故事？", "legacy_check": "zh27", "expected_entry": 29, "word": "海云院"}
+{"id": "code_comparison", "set": "dev_zh", "lang": "zh", "question": "吴中186和吴中187是同一处吗？", "legacy_check": "zh27", "expected_entry": 18, "word": "司徒庙"}

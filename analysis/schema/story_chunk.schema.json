@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "story_chunk.schema.json",
+  "title": "树的故事子块",
+  "description": "检索单位。unit_id 等于所属条目卡的 unit_id。空的可选字段不写。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["chunk_id", "unit_id", "part", "parts", "source_id", "content_type", "text", "context_header", "lang",
+               "n_chars", "locator", "tree_ids", "site_ids", "site_name", "district", "species", "link",
+               "source_tier", "as_of", "review_status", "rights", "content_hash", "pipeline"],
+  "properties": {
+    "chunk_id": {"type": "string", "pattern": "^shbl:story-[0-9]{3}:(body|fieldnote|interview|background)-[0-9]+$"},
+    "unit_id": {"type": "string", "pattern": "^shbl:story-[0-9]{3}$"},
+    "part": {"type": "integer", "minimum": 1},
+    "parts": {"type": "integer", "minimum": 1},
+    "source_id": {"const": "SRC-SHBL"},
+    "content_type": {"enum": ["story", "fieldnote", "interview", "background"]},
+    "text": {"type": "string", "minLength": 1},
+    "context_header": {"type": "string", "pattern": "^《树碑立传》树的故事 第[0-9]+条｜"},
+    "lang": {"const": "zh-Hans"},
+    "n_chars": {"type": "integer", "minimum": 1},
+    "search_terms": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "figures": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["caption", "printed_page"],
+        "properties": {"caption": {"type": "string", "minLength": 1}, "printed_page": {"type": "integer"}}
+      }
+    },
+    "locator": {
+      "type": "object", "additionalProperties": false,
+      "required": ["section", "entry_no", "title", "heading_path", "pdf_pages", "printed_pages"],
+      "properties": {
+        "section": {"const": "树的故事"},
+        "entry_no": {"type": "integer", "minimum": 1, "maximum": 105},
+        "title": {"type": "string", "minLength": 1},
+        "heading_path": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}},
+        "pdf_pages": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 38, "maximum": 81}},
+        "printed_pages": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 74, "maximum": 161}}
+      }
+    },
+    "tree_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z0-9-]+$"}},
+    "site_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^S[0-9]{2,}$"}},
+    "site_name": {"type": "string", "minLength": 1},
+    "district": {"enum": ["吴中区", "姑苏区", "吴江区", "虎丘区（高新区）", "相城区", "工业园区", "昆山市", "常熟市", "太仓市", "张家港市"]},
+    "species": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "official_codes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "link": {
+      "type": "object", "additionalProperties": false, "required": ["status"],
+      "properties": {"status": {"enum": ["explicit", "cross_ref", "manual", "unlinked"]}, "evidence": {"type": "string"}}
+    },
+    "source_tier": {"const": "B"},
+    "as_of": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}(-[0-9]{2})?$"},
+    "review_status": {"enum": ["pending", "verified", "rejected"]},
+    "review_note": {"type": "string"},
+    "certainty_flags": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["legend", "recorded", "hedged"]}},
+    "conflict_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^cf-[a-z0-9-]+$"}},
+    "sensitivity": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["red_history", "religion", "personal_info"]}},
+    "rights": {
+      "type": "object", "additionalProperties": false, "required": ["holder", "display"],
+      "properties": {"holder": {"type": "string"}, "display": {"enum": ["full", "excerpt", "link_only"]}, "note": {"type": "string"}}
+    },
+    "content_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{16}$"},
+    "pipeline": {"type": "string", "minLength": 1},
+    "interview": {
+      "type": "object", "additionalProperties": false, "required": ["speakers"],
+      "properties": {
+        "speakers": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["label", "side"],
+            "properties": {"label": {"type": "string", "minLength": 1}, "side": {"enum": ["ask", "answer"]}}
+          }
+        },
+        "observed_on": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+      }
+    },
+    "fieldnote": {
+      "type": "object", "additionalProperties": false, "required": ["author_role"],
+      "properties": {
+        "author_role": {"enum": ["志愿者", "采访人"]},
+        "observed_on": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+      }
+    },
+    "background": {
+      "type": "object", "additionalProperties": false, "required": ["topic"],
+      "properties": {"topic": {"type": "string", "minLength": 1}}
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"content_type": {"const": "interview"}}}, "then": {"required": ["interview"]}, "else": {"not": {"required": ["interview"]}}},
+    {"if": {"properties": {"content_type": {"const": "fieldnote"}}}, "then": {"required": ["fieldnote"]}, "else": {"not": {"required": ["fieldnote"]}}},
+    {"if": {"properties": {"content_type": {"const": "background"}}}, "then": {"required": ["background"]}, "else": {"not": {"required": ["background"]}}}
+  ]
+}

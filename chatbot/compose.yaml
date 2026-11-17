@@ -1,0 +1,63 @@
+name: wu-tree-chatbot
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    init: true
+    environment:
+      APP_ENV: production
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:?Set DEEPSEEK_API_KEY in .env.server}
+      DEEPSEEK_BASE_URL: https://api.deepseek.com
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-flash}
+      MODEL_TIMEOUT: ${MODEL_TIMEOUT:-90}
+      MAX_MODEL_CONCURRENCY: ${MAX_MODEL_CONCURRENCY:-6}
+      TRUSTED_PROXIES: '${TRUSTED_PROXIES:-["127.0.0.1","::1","10.0.0.0/8","172.16.0.0/12","192.168.0.0/16"]}'
+      ALLOWED_ORIGINS: '${ALLOWED_ORIGINS:-[]}'
+      QA_TOP_ENTRIES: ${QA_TOP_ENTRIES:-8}
+      EXPLORE_TOP_ENTRIES: ${EXPLORE_TOP_ENTRIES:-6}
+      EMBEDDING_API_KEY: ${EMBEDDING_API_KEY:-}
+      EMBEDDING_BASE_URL: ${EMBEDDING_BASE_URL:-}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-qwen3.7-text-embedding}
+      EMBEDDING_DIMENSIONS: ${EMBEDDING_DIMENSIONS:-1024}
+      EMBEDDING_TIMEOUT: ${EMBEDDING_TIMEOUT:-30}
+      RETRIEVAL_MODE: vector
+      RETRIEVAL_CANDIDATE_LIMIT: ${RETRIEVAL_CANDIDATE_LIMIT:-500}
+      RETRIEVAL_CONTEXT_CHARS: ${RETRIEVAL_CONTEXT_CHARS:-100000}
+      RERANK_ENABLED: ${RERANK_ENABLED:-true}
+      RERANK_MODEL: ${RERANK_MODEL:-qwen3.7-text-rerank}
+      RERANK_TIMEOUT: ${RERANK_TIMEOUT:-20}
+      RERANK_ENRICHMENT: ${RERANK_ENRICHMENT:-off}
+      THEME_POOL: ${THEME_POOL:-off}
+      ACCESS_PASSWORD: ${ACCESS_PASSWORD:?Set ACCESS_PASSWORD in .env.server}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      KNOWLEDGE_DIR: /app/data/knowledge
+      STATE_DIR: /app/state
+      VERIFY_ANSWERS: ${VERIFY_ANSWERS:-true}
+    volumes:
+      - ./data/knowledge:/app/data/knowledge:ro
+      - app_state:/app/state
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    expose:
+      - "8000"
+  web:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        APP_BASE_PATH: ${APP_BASE_PATH:-/}
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "${BIND_ADDRESS:-127.0.0.1}:${WEB_PORT:-8080}:8080"
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  app_state:

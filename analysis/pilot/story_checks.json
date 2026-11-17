@@ -1,0 +1,78 @@
+{
+  "default_build_matches_baseline": true,
+  "protected_inputs_unchanged": [
+    "树碑立传：吴中古树名木的故事教育读物(1).pdf",
+    "analysis/scripts/pilot_stories.py",
+    "analysis/pilot/stories.jsonl",
+    "analysis/pilot/chunks_story.old.jsonl"
+  ],
+  "corruption_checks": [
+    "source tampering despite valid hash rejected",
+    "invalid item reference rejected",
+    "stale hash rejected"
+  ],
+  "retrieval_checks": [
+    "punctuation-only query empty",
+    "pending excluded in verified-only mode",
+    "rejected hits excluded",
+    "rejected siblings excluded",
+    "budget trimming preserves hit text",
+    "impossible budget fails explicitly"
+  ],
+  "external_references": {
+    "RAG切块要素设计.md": [
+      "shbl:story-018:body-1",
+      "shbl:story-021:body-1",
+      "shbl:story-021:interview-1",
+      "shbl:story-055:body-1"
+    ],
+    "chunk_examples.jsonl": [
+      "shbl:story-018:body-1"
+    ]
+  },
+  "id_migration": {
+    "old_count": 150,
+    "new_count": 138,
+    "removed": [
+      "shbl:story-002:fieldnote-1",
+      "shbl:story-011:body-2",
+      "shbl:story-026:interview-3",
+      "shbl:story-034:body-2",
+      "shbl:story-059:body-2",
+      "shbl:story-062:body-2",
+      "shbl:story-063:body-2",
+      "shbl:story-066:body-2",
+      "shbl:story-072:body-2",
+      "shbl:story-075:body-2",
+      "shbl:story-076:body-2",
+      "shbl:story-077:body-2",
+      "shbl:story-082:body-2",
+      "shbl:story-082:body-3"
+    ],
+    "added": [
+      "shbl:story-003:fieldnote-1",
+      "shbl:story-026:fieldnote-1"
+    ],
+    "text_changed_at_same_id": [
+      "shbl:story-011:body-1",
+      "shbl:story-023:body-1",
+      "shbl:story-023:body-2",
+      "shbl:story-034:body-1",
+      "shbl:story-059:body-1",
+      "shbl:story-062:body-1",
+      "shbl:story-063:body-1",
+      "shbl:story-066:body-1",
+      "shbl:story-072:body-1",
+      "shbl:story-075:body-1",
+      "shbl:story-076:body-1",
+      "shbl:story-077:body-1",
+      "shbl:story-082:body-1"
+    ]
+  },
+  "images": {
+    "count": 262,
+    "all_rgb_and_decodable": true,
+    "bytes": 41929244
+  },
+  "passed": true
+}

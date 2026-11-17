@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "古树问答 RAG chunk",
+  "description": "一个可检索、可引用的文本块。字段含义与优先级见 analysis/RAG切块要素设计.md。树的事实（树龄、坐标、现状）不在这里，放在 trees 等实体表，用 tree_ids 关联。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "chunk_id", "unit_id", "part", "parts", "source_id", "content_type",
+    "text", "context_header", "lang", "n_chars", "locator",
+    "tree_ids", "site_ids", "site_name", "district", "species",
+    "source_tier", "as_of", "review_status"
+  ],
+  "properties": {
+    "chunk_id": {"type": "string", "pattern": "^[a-z0-9]+:[a-z0-9-]+:[a-z]+-[0-9]+$", "description": "{来源简码}:{单元}:{块类}-{序号}，由结构决定，重新解析后不变"},
+    "unit_id": {"type": "string", "pattern": "^[a-z0-9]+:[a-z0-9-]+$", "description": "逻辑单元：条目、文章、作品、标识牌、FAQ 条目"},
+    "part": {"type": "integer", "minimum": 1},
+    "parts": {"type": "integer", "minimum": 1},
+    "source_id": {"type": "string", "pattern": "^SRC-[A-Z0-9-]+$", "description": "sources 表主键"},
+    "content_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{16,64}$", "description": "context_header + 换行 + text 的哈希，即向量化的输入；变化时才重新向量化"},
+    "pipeline": {"type": "string", "description": "生成本块的解析器及版本"},
+
+    "content_type": {"enum": ["intro", "story", "background", "interview", "fieldnote", "art", "essay", "sign", "survey", "faq", "media_article"]},
+    "text": {"type": "string", "minLength": 1, "description": "原文，只做空白与数字间隙规范化，不改写"},
+    "context_header": {"type": "string", "minLength": 1, "description": "由元数据拼成的标题行，向量化和关键词检索时放在 text 前面"},
+    "lang": {"enum": ["zh-Hans", "en"]},
+    "n_chars": {"type": "integer", "minimum": 1},
+    "search_terms": {"type": "array", "items": {"type": "string"}, "uniqueItems": true, "description": "只进关键词索引的补充词：官方编号、别名、学名"},
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["caption"],
+        "properties": {"caption": {"type": "string"}, "printed_page": {"type": "integer"}, "media_id": {"type": "string"}}
+      }
+    },
+
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["section", "title", "heading_path"],
+      "properties": {
+        "section": {"type": "string"},
+        "entry_no": {"type": "integer", "minimum": 1},
+        "title": {"type": "string"},
+        "heading_path": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "pdf_pages": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 1},
+        "printed_pages": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 1},
+        "url": {"type": "string"},
+        "media_id": {"type": "string"},
+        "record": {"type": "string", "description": "内部表的行，如 faq:0001、survey:dlzb-2026-09-12"}
+      },
+      "anyOf": [{"required": ["printed_pages"]}, {"required": ["url"]}, {"required": ["media_id"]}, {"required": ["record"]}]
+    },
+
+    "tree_ids": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9-]+$"}, "uniqueItems": true, "description": "trees 表主键；尚未建档时为空数组"},
+    "site_ids": {"type": "array", "items": {"type": "string", "pattern": "^S[0-9]{2,}$"}, "uniqueItems": true},
+    "site_name": {"type": "string", "description": "来源中印刷的地点原文"},
+    "district": {"type": "string"},
+    "species": {"type": "array", "items": {"type": "string"}, "uniqueItems": true, "description": "规范中文名，对应 species 表"},
+    "official_codes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "link": {
+      "type": "object", "additionalProperties": false, "required": ["status"],
+      "properties": {
+        "status": {"enum": ["explicit", "cross_ref", "manual", "unlinked"]},
+        "evidence": {"type": "string"}
+      }
+    },
+    "persons": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["name", "kind"],
+        "properties": {
+          "name": {"type": "string"},
+          "kind": {"enum": ["historical", "author", "artist", "staff", "volunteer", "interviewee", "other"]}
+        }
+      }
+    },
+
+    "source_tier": {"enum": ["A", "B", "C", "D"], "description": "E 级（AI 生成、无出处）不入 chunk 库，留在 review_queue"},
+    "as_of": {"type": "string", "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$", "description": "内容所反映的时间；文中“今年”“目前”按它理解"},
+    "review_status": {"enum": ["verified", "pending", "rejected"]},
+    "review_note": {"type": "string"},
+    "certainty_flags": {"type": "array", "items": {"enum": ["legend", "recorded", "hedged"]}, "uniqueItems": true},
+    "claim_ids": {"type": "array", "items": {"type": "string", "pattern": "^C-[A-Z0-9-]+$"}, "uniqueItems": true},
+    "conflict_ids": {"type": "array", "items": {"type": "string", "pattern": "^cf-[a-z0-9-]+$"}, "uniqueItems": true},
+    "dup_of": {"type": "string", "pattern": "^[a-z0-9]+:[a-z0-9-]+:[a-z]+-[0-9]+$"},
+
+    "sensitivity": {"type": "array", "items": {"enum": ["red_history", "religion", "personal_info"]}, "uniqueItems": true},
+    "rights": {
+      "type": "object", "additionalProperties": false, "required": ["holder", "display"],
+      "properties": {
+        "holder": {"type": "string"},
+        "display": {"enum": ["full", "excerpt", "link_only"]},
+        "note": {"type": "string"}
+      }
+    },
+    "audience": {"type": "array", "items": {"enum": ["child", "general", "expert"]}, "uniqueItems": true},
+
+    "interview": {
+      "type": "object", "additionalProperties": false, "required": ["speakers"],
+      "properties": {
+        "speakers": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["label", "side"],
+            "properties": {"label": {"type": "string"}, "side": {"enum": ["ask", "answer"]}}
+          }
+        },
+        "observed_on": {"type": "string", "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"}
+      }
+    },
+    "fieldnote": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "observed_on": {"type": "string", "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"},
+        "author_role": {"type": "string"}
+      }
+    },
+    "background": {
+      "type": "object", "additionalProperties": false, "required": ["topic"],
+      "properties": {"topic": {"type": "string"}}
+    },
+    "art": {
+      "type": "object", "additionalProperties": false, "required": ["work_title"],
+      "properties": {
+        "work_title": {"type": "string"}, "artist": {"type": "string"},
+        "medium": {"type": "string"}, "year": {"type": "string"},
+        "statement_by": {"enum": ["artist", "curator", "label"]}
+      }
+    },
+    "essay": {
+      "type": "object", "additionalProperties": false, "required": ["article_title"],
+      "properties": {
+        "article_title": {"type": "string"}, "author": {"type": "string"},
+        "subheading": {"type": "string"}, "references": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "sign": {
+      "type": "object", "additionalProperties": false, "required": ["sign_type", "media_id"],
+      "properties": {
+        "sign_type": {"enum": ["official_plate", "interpretive", "inscription"]},
+        "issuer": {"type": "string"}, "year": {"type": "string"}, "media_id": {"type": "string"}
+      }
+    },
+    "survey": {
+      "type": "object", "additionalProperties": false, "required": ["survey_id", "observed_on"],
+      "properties": {"survey_id": {"type": "string"}, "observed_on": {"type": "string"}}
+    },
+    "faq": {
+      "type": "object", "additionalProperties": false, "required": ["question", "evidence_chunk_ids", "owner_role"],
+      "properties": {
+        "question": {"type": "string"},
+        "alt_questions": {"type": "array", "items": {"type": "string"}},
+        "evidence_chunk_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[a-z0-9]+:[a-z0-9-]+:[a-z]+-[0-9]+$"}},
+        "owner_role": {"type": "string"}
+      }
+    },
+    "media_article": {
+      "type": "object", "additionalProperties": false, "required": ["publisher", "url", "published_at"],
+      "properties": {"publisher": {"type": "string"}, "url": {"type": "string"}, "published_at": {"type": "string"}}
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"content_type": {"const": "interview"}}}, "then": {"required": ["interview"]}},
+    {"if": {"properties": {"content_type": {"const": "background"}}}, "then": {"required": ["background"]}},
+    {"if": {"properties": {"content_type": {"const": "art"}}}, "then": {"required": ["art"]}},
+    {"if": {"properties": {"content_type": {"const": "essay"}}}, "then": {"required": ["essay"]}},
+    {"if": {"properties": {"content_type": {"const": "sign"}}}, "then": {"required": ["sign"]}},
+    {"if": {"properties": {"content_type": {"const": "survey"}}}, "then": {"required": ["survey"]}},
+    {"if": {"properties": {"content_type": {"const": "faq"}}}, "then": {"required": ["faq"]}},
+    {"if": {"properties": {"content_type": {"const": "media_article"}}}, "then": {"required": ["media_article"]}}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "source": "《树碑立传》树的故事",
+  "source_id": "SRC-SHBL",
+  "as_of": "2024-08",
+  "pipeline": "pilot_stories@3+index_story@1+build_story_chunks@2.1",
+  "database_sha256": "d6870439358c4dadfd154ef202c58d90284c736d97a85d3bb909e21a013ea7d1",
+  "retriever_sha256": "270f9b5b34fec7262da8656f5d271aa9f00cdd193783dc48f27efc95f135843f",
+  "counts": {
+    "entries": 105,
+    "items": 108,
+    "chunks": 138,
+    "images": 262
+  },
+  "embedding": {
+    "model": "qwen3.7-text-embedding",
+    "dimensions": 1024,
+    "vectors": 138,
+    "built_at": "2026-11-09T06:34:54.940091+00:00"
+  },
+  "knowledge_status": "confirmed"
+}

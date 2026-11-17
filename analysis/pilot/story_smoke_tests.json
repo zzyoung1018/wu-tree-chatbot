@@ -1,0 +1,91 @@
+{
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "query": "树洞口和断口怎么清理",
+      "expected": "shbl:story-026",
+      "rank": 1,
+      "matched": [
+        "shbl:story-026:interview-1",
+        "shbl:story-026:interview-2"
+      ],
+      "passed": true,
+      "context_chars": 3607
+    },
+    {
+      "query": "天平山的马尾松还在吗",
+      "expected": "shbl:story-001",
+      "rank": 1,
+      "matched": [
+        "shbl:story-001:body-3"
+      ],
+      "passed": true,
+      "context_chars": 2781
+    },
+    {
+      "query": "三官殿的龙柏",
+      "expected": "shbl:story-002",
+      "rank": 1,
+      "matched": [
+        "shbl:story-002:body-2"
+      ],
+      "passed": true,
+      "context_chars": 1868
+    },
+    {
+      "query": "吴中203",
+      "expected": "shbl:story-021",
+      "rank": 1,
+      "matched": [
+        "shbl:story-021:body-1",
+        "shbl:story-021:fieldnote-1",
+        "shbl:story-021:interview-1",
+        "shbl:story-021:interview-2"
+      ],
+      "passed": true,
+      "context_chars": 2873
+    },
+    {
+      "query": "石楠花开时志愿者去做了什么",
+      "expected": "shbl:story-021",
+      "rank": 1,
+      "matched": [
+        "shbl:story-021:fieldnote-1"
+      ],
+      "passed": true,
+      "context_chars": 3845
+    },
+    {
+      "query": "灵源古寺的罗汉松",
+      "expected": "shbl:story-011",
+      "rank": 1,
+      "matched": [
+        "shbl:story-011:body-1"
+      ],
+      "passed": true,
+      "context_chars": 2578
+    },
+    {
+      "query": "古树受伤了怎么保护",
+      "expected": "shbl:story-026",
+      "rank": 1,
+      "matched": [
+        "shbl:story-026:interview-1",
+        "shbl:story-026:interview-2"
+      ],
+      "passed": true,
+      "context_chars": 4761
+    },
+    {
+      "query": "湖沙庙的榉树",
+      "expected": "shbl:story-026",
+      "rank": 1,
+      "matched": [
+        "shbl:story-026:body-1"
+      ],
+      "passed": true,
+      "context_chars": 3945
+    }
+  ]
+}
